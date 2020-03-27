@@ -129,7 +129,8 @@ class SegModel(pl.LightningModule):
         self.root_path = hparams.root
         self.batch_size = hparams.batch_size
         self.learning_rate = hparams.lr
-        self.net = UNet(num_classes=19)
+        self.net = UNet(num_classes=19, num_layers=hparams.num_layers,
+                        features_start=hparams.features_start, bilinear=hparams.bilinear)
         self.transform = transforms.Compose([
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.35675976, 0.37380189, 0.3764753],
@@ -195,7 +196,7 @@ def main(hparams):
     trainer = pl.Trainer(
         gpus=hparams.gpus,
         logger=wandb_logger,
-        max_epochs=10
+        max_epochs=20
     )
 
     # ------------------------
@@ -211,8 +212,8 @@ if __name__ == '__main__':
     parser.add_argument("--batch_size", type=int, default=4, help="size of the batches")
     parser.add_argument("--lr", type=float, default=0.001, help="adam: learning rate")
     parser.add_argument("--num_layers", type=int, default=5, help="number of layers on u-net")
-    parser.add_argument("--features_start", type=float, default=0.001, help="number of features in first layer")
-    parser.add_argument("--bilinear", type=float, default=0.001, help="whether to use bilinear interpolation or transposed")
+    parser.add_argument("--features_start", type=float, default=64, help="number of features in first layer")
+    parser.add_argument("--bilinear", type=float, default=False, help="whether to use bilinear interpolation or transposed")
 
     hparams = parser.parse_args()
 
