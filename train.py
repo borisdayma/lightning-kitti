@@ -64,7 +64,7 @@ class KITTI(Dataset):
         # Split between train and valid set
         random_inst = random.Random(12345)  # for repeatability
         n_items = len(self.img_list)
-        idxs = random_inst.sample(range(n_items), n_items // 10)
+        idxs = random_inst.sample(range(n_items), n_items // 5)
         if self.split == 'train': idxs = [idx for idx in range(n_items) if idx not in idxs]
         self.img_list = [self.img_list[i] for i in idxs]
         self.mask_list = [self.mask_list[i] for i in idxs]        
