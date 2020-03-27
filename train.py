@@ -186,6 +186,9 @@ def main(hparams):
     # ------------------------
     wandb_logger = WandbLogger()
 
+    # optional: log model topology
+    wandb_logger.watch(model.net)
+
     # ------------------------
     # 3 INIT TRAINER
     # ------------------------
@@ -196,7 +199,7 @@ def main(hparams):
     )
 
     # ------------------------
-    # 4 START TRAINING
+    # 5 START TRAINING
     # ------------------------
     trainer.fit(model)
 
@@ -207,6 +210,9 @@ if __name__ == '__main__':
     parser.add_argument("--gpus", type=int, default=-1, help="number of available GPUs")
     parser.add_argument("--batch_size", type=int, default=4, help="size of the batches")
     parser.add_argument("--lr", type=float, default=0.001, help="adam: learning rate")
+    parser.add_argument("--num_layers", type=int, default=5, help="number of layers on u-net")
+    parser.add_argument("--features_start", type=float, default=0.001, help="number of features in first layer")
+    parser.add_argument("--bilinear", type=float, default=0.001, help="whether to use bilinear interpolation or transposed")
 
     hparams = parser.parse_args()
 
