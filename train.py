@@ -183,7 +183,7 @@ def main(hparams):
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--root", type=str, help="path where dataset is stored")
-    parser.add_argument("--gpus", type=int, help="number of available GPUs")
+    parser.add_argument("--gpus", type=int, default=-1, help="number of available GPUs")
     parser.add_argument("--batch_size", type=int, default=4, help="size of the batches")
     parser.add_argument("--lr", type=float, default=0.001, help="adam: learning rate")
 
