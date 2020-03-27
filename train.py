@@ -96,6 +96,8 @@ class KITTI(Dataset):
             mask[mask == voidc] = self.ignore_index
         for validc in self.valid_labels:
             mask[mask == validc] = self.class_map[validc]
+        # remove extra idxs from updated dataset
+        mask[mask>18]=self.ignore_index
         return mask
 
     def get_filenames(self, path):
