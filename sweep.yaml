@@ -7,7 +7,7 @@ parameters:
   batch_size:
     distribution: int_uniform
     min: 1
-    max: 2
+    max: 4
   lr:
     distribution: log_uniform
     min: -10
@@ -15,7 +15,7 @@ parameters:
   num_layers:
     distribution: int_uniform
     min: 2
-    max: 5
+    max: 6
   features_start:
     distribution: categorical
     values:
@@ -23,6 +23,7 @@ parameters:
       - 16
       - 32
       - 64
+      - 128
   bilinear:
     distribution: categorical
     values:
