@@ -10,6 +10,8 @@ Hyper-parameters are defined pseudo-randomly and every run is automatically logg
 
 You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatically hyper-parameters.
 
+*Note*: this example has been adapted from Pytorch-Lightning examples.
+
 ## Usage
 
 1. Install dependencies through `requirements.txt`, `Pipfile` or manually (Pytorch, Pytorch-Lightning & Wandb)
@@ -22,13 +24,13 @@ You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatica
 ## Sweeps
 
 1. Run `wandb sweep sweep.yaml`
-2. Run `wandb agent <sweep_id>` where `<sweep_id>` is given by previous command.
-3. Visualize and compare the sweep runs. See [my sweep](LINK).
+2. Run `wandb agent <sweep_id>` where `<sweep_id>` is given by previous command
+3. Visualize and compare the sweep runs
+
+   ![alt text](imgs/sweep.png)
 
 ## Results
 
-After running the script a few times, you will be able to compare quickly a large combination of hyperparameters. As an example, you can refer to [my runs](LINK).
-
-![alt text](imgs/graphs.png)
+After running the script a few times, you will be able to compare quickly a large combination of hyperparameters. As an example, you can refer to [my results](https://app.wandb.ai/borisd13/lightning-kitti/sweeps/lrqc8fu3/workspace?workspace=user-borisd13).
 
 Feel free to modify the script and define your own hyperparameters.
