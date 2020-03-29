@@ -196,7 +196,9 @@ def main(hparams):
     trainer = pl.Trainer(
         gpus=hparams.gpus,
         logger=wandb_logger,
-        max_epochs=20
+        max_epochs=hparams.epochs,
+        accumulate_grad_batches=hparams.grad_batches,
+        checkpoint_callback=False
     )
 
     # ------------------------
@@ -214,6 +216,11 @@ if __name__ == '__main__':
     parser.add_argument("--num_layers", type=int, default=5, help="number of layers on u-net")
     parser.add_argument("--features_start", type=float, default=64, help="number of features in first layer")
     parser.add_argument("--bilinear", type=float, default=False, help="whether to use bilinear interpolation or transposed")
+    parser.add_argument("--grad_batches", type=int, default=1, help="number of batches to accumulate")
+    parser.add_argument("--epochs", type=int, default=20, help="number of epochs to train")
+
+    grad_batches = 1,
+    epochs = 20
 
     hparams = parser.parse_args()
 
