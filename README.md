@@ -31,6 +31,8 @@ You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatica
 
 ## Results
 
-After running the script a few times, you will be able to compare quickly a large combination of hyperparameters. As an example, you can refer to [my results](https://app.wandb.ai/borisd13/lightning-kitti/reports/Lightning-Kitti--Vmlldzo3MTcyMw).
+After running the script a few times, you will be able to compare quickly a large combination of hyperparameters.
 
 Feel free to modify the script and define your own hyperparameters.
+
+[See the live report → ](https://app.wandb.ai/borisd13/lightning-kitti/reports/Lightning-Kitti--Vmlldzo3MTcyMw).
