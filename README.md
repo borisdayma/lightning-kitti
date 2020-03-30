@@ -35,4 +35,4 @@ After running the script a few times, you will be able to compare quickly a larg
 
 Feel free to modify the script and define your own hyperparameters.
 
-[See the live report → ](https://app.wandb.ai/borisd13/lightning-kitti/reports/Lightning-Kitti--Vmlldzo3MTcyMw).
+[See the live report → ](https://app.wandb.ai/borisd13/lightning-kitti/reports/Lightning-Kitti--Vmlldzo3MTcyMw)
