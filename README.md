@@ -6,7 +6,19 @@
 
 This is a simple demo for performing semantic segmentation on the [Kitti dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php) using [Pytorch-Lightning](https://pytorch-lightning.readthedocs.io/) and optimizing the neural network by monitoring and comparing runs with [Weights & Biases](https://docs.wandb.com/).
 
-Hyper-parameters are defined pseudo-randomly and every run is automatically logged onto [Weights & Biases](https://www.wandb.com/) for easier analysis/interpretation of results and how to optimize the architecture.
+Pytorch-Ligthning includes a logger for W&B that can be called simply with:
+
+```python
+from pytorch_lightning.loggers import WandbLogger
+from pytorch_lightning import Trainer
+
+wandb_logger = WandbLogger()
+trainer = Trainer(logger=wandb_logger)
+```
+
+Refer to [the documentation](https://docs.wandb.com/library/frameworks/pytorch/lightning) for more details.
+
+Hyper-parameters can be defined manually and every run is automatically logged onto [Weights & Biases](https://www.wandb.com/) for easier analysis/interpretation of results and how to optimize the architecture.
 
 You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatically hyper-parameters.
 
