@@ -219,9 +219,6 @@ if __name__ == '__main__':
     parser.add_argument("--grad_batches", type=int, default=1, help="number of batches to accumulate")
     parser.add_argument("--epochs", type=int, default=20, help="number of epochs to train")
 
-    grad_batches = 1,
-    epochs = 20
-
     hparams = parser.parse_args()
 
     main(hparams)
