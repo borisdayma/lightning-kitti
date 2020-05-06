@@ -2,6 +2,8 @@
 
 *Semantic Segmentation with Pytorch-Lightning*
 
+Note: this example is now part of Pytorch-Lightning repo and directly maintained there.
+
 ## Introduction
 
 This is a simple demo for performing semantic segmentation on the [Kitti dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php) using [Pytorch-Lightning](https://pytorch-lightning.readthedocs.io/) and optimizing the neural network by monitoring and comparing runs with [Weights & Biases](https://docs.wandb.com/).
