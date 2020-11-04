@@ -2,8 +2,6 @@
 
 *Semantic Segmentation with Pytorch-Lightning*
 
-Note: this example is now part of Pytorch-Lightning repo and directly maintained there.
-
 ## Introduction
 
 This is a simple demo for performing semantic segmentation on the [Kitti dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php) using [Pytorch-Lightning](https://pytorch-lightning.readthedocs.io/) and optimizing the neural network by monitoring and comparing runs with [Weights & Biases](https://docs.wandb.com/).
@@ -35,7 +33,14 @@ You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatica
 
    ![alt text](imgs/results.png)
 
-## Sweeps
+## Sweeps for hyper-parameter tuning
+
+[W&B Sweeps](https://docs.wandb.com/sweeps/) can be defined in multiple ways:
+
+* with a YAML file - best for distributed sweeps and runs from command line
+* with a Python object - best for notebooks
+
+In this project we use a YAML file. You can refer to [W&B documentation](https://docs.wandb.com/library/integrations/lightning) for more Pytorch-Lightning examples.
 
 1. Run `wandb sweep sweep.yaml`
 2. Run `wandb agent <sweep_id>` where `<sweep_id>` is given by previous command
