@@ -26,10 +26,11 @@ You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatica
 
 ## Usage
 
+1. Download [Kitti dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php)
 1. Install dependencies through `requirements.txt`, `Pipfile` or manually (Pytorch, Pytorch-Lightning & Wandb)
-2. Log in or sign up for an account -> `wandb login`
-3. Run `python train.py`
-4. Visualize and compare your runs through generated link
+1. Log in or sign up for an account -> `wandb login`
+1. Run `python train.py` and add any optional args
+1. Visualize and compare your runs through generated link
 
    ![alt text](imgs/results.png)
 

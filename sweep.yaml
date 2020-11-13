@@ -1,4 +1,4 @@
-program: train_sweep.py
+program: train.py
 method: bayes
 metric:
   name: val_loss
