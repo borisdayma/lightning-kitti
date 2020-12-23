@@ -26,6 +26,12 @@ You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatica
 
 ## Usage
 
+### Notebook
+
+- A quick way to run the training scrip is to go to the `notebook/tutorial.ipynb` and play with it.
+
+### Script
+
 1. Clone this repository.
 2. Download [Kitti dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php)
 3. The dataset will be downloaded in the form of a zip file namely `data_semantics.zip`. Unzip the dataset inside the `lightning-kitti/data_semantic/` folder.
