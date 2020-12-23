@@ -26,11 +26,13 @@ You can also run [sweeps](https://docs.wandb.com/sweeps/) to optimize automatica
 
 ## Usage
 
-1. Download [Kitti dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php)
-1. Install dependencies through `requirements.txt`, `Pipfile` or manually (Pytorch, Pytorch-Lightning & Wandb)
-1. Log in or sign up for an account -> `wandb login`
-1. Run `python train.py` and add any optional args
-1. Visualize and compare your runs through generated link
+1. Clone this repository.
+2. Download [Kitti dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php)
+3. The dataset will be downloaded in the form of a zip file namely `data_semantics.zip`. Unzip the dataset inside the `lightning-kitti/data_semantic/` folder.
+4. Install dependencies through `requirements.txt`, `Pipfile` or manually (Pytorch, Pytorch-Lightning & Wandb)
+5. Log in or sign up for an account -> `wandb login`
+6. Run `python train.py` and add any optional args
+7. Visualize and compare your runs through generated link
 
    ![alt text](imgs/results.png)
 
